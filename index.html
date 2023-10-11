@@ -141,6 +141,11 @@
 		</style>
 	</head>
 	<body>
+		<!-- Embed Google Drive Audio with Hidden Controls -->
+		<audio id="backgroundAudio" controlslist="nodownload" style="display: none;">
+			<source src="https://drive.google.com/uc?export=download&id=1OllZsgC0a3OzWYtJVfnZdlSKqssvkdsK" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
 		<div class="container">
 			<div class="menu-container">
 				<div class="menu">
@@ -158,5 +163,12 @@
 		<div class="footer">
 			Ⓒ avatarstany plays 2023
 		</div>
+		<script>
+			// Autoplay the background audio when the page loads
+			window.addEventListener('load', function() {
+			    var audio = document.getElementById('backgroundAudio');
+			    audio.play();
+			});
+		</script>
 	</body>
 </html>
